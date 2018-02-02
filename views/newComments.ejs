@@ -1,0 +1,8 @@
+<% include partials/header.ejs %>
+
+<form method = "POST" action = "/campgrounds/<% campground._id %>/comments/new" >
+	<input type = "text" placeholder = "Enter Comment">
+	<input type = "submit"></input>
+</form>
+
+<% include partials/footer.ejs %>

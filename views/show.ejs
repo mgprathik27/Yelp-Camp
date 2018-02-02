@@ -1,9 +1,31 @@
 <% include partials/header.ejs %>
+<div class = "container">
+	<div class = "row">
+		<div class ="col-md-3">
+			<div class = "lead">Campoholics</div>
+			<div class = "list-group">
+				<div class = "list-group-item active">Info 1</div>
+				<div class = "list-group-item">Info 2</div>
+				<div class = "list-group-item">Info 3</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <h1><%= campground.name %></h1>
 <img src= <%= campground.image %>
 <br>
 <p><%= campground.Description %></p>
+
+<% campground.comments.forEach(function(comment){ %>
+	
+<p>	<%=comment.text %> -  <%=comment.author; %>		</p
+	
+<% }) %>
+<div>
+	<a href = "/campgrounds/:id/comments/new">Add new comments</a>
+</div>
+
 <div>
 <a href ="/campgrounds">Go Back</a> 
 </div>
